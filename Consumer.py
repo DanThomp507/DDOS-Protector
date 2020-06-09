@@ -12,11 +12,9 @@ def print_log(message):
 
 def get_ip(message):
   obj = json.loads(message.value)
-  # print(obj)
   return obj["remote_host"]
 
 def print_culprits(culprits, isDebug):
-  # print(culprits)
   filename = 'text-run.txt'
   open(filename, 'w').close()
   if not culprits:
@@ -57,8 +55,8 @@ def process_messages(args, consumer):
       kvs[ip] = 0
     kvs[ip] = kvs[ip] + 1
 
-    # if the current IP has been recorded x amount of times, report it to unique set
-    if kvs[ip] >= args.times:
+    # set the limit to 2 (arbritrarily low), then add ip to culprits if exceeding limit
+    if kvs[ip] >= 2:
       if not ip in culprits:
         print('FOUND CULPRIT IP:', ip)
         culprits.add(ip)
