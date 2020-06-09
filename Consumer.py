@@ -12,9 +12,11 @@ def print_log(message):
 
 def get_ip(message):
   obj = json.loads(message.value)
+  # print(obj)
   return obj["remote_host"]
 
 def print_culprits(culprits, isDebug):
+  # print(culprits)
   filename = 'text-run.txt'
   open(filename, 'w').close()
   if not culprits:
@@ -22,7 +24,6 @@ def print_culprits(culprits, isDebug):
   else:
     if isDebug:
       print('All Culprits:')
-      print(",".join(culprits))
 
     print('Writing results to file:', filename)
     # Clear old contents
@@ -39,7 +40,6 @@ def process_messages(args, consumer):
 
   print('Starting the process...')
   for message in consumer:
-    # print_log(message)
     ip = get_ip(message)
 
     # if sliding window is full, remove head, decrement dictionary, remove from dict no value

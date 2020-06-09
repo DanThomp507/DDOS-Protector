@@ -5,9 +5,6 @@ import argparse
 import read_log
 from kafka import KafkaProducer
 from datetime import datetime
-# import logging
-
-# logging.basicConfig(level=logging.DEBUG)
 
 KAFKA_HOSTS = ['localhost:9092']
 KAFKA_VERSION = (0, 10)
@@ -29,7 +26,7 @@ def send_message(producer, topic, input):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-rh', '--host', default="127.0.0.1:9092")
+    parser.add_argument('-rh', '--host', default="localhost:9092")
     parser.add_argument('-t', '--topic', default='demo')
     parser.add_argument('-i', '--input', required=True)
     args = parser.parse_args()
