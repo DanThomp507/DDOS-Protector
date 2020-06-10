@@ -14,19 +14,24 @@ If you do not, instructions can be found here: <https://medium.com/@Ankitthakur/
 
 ## How To Start
 
-1. Start your services
+1. Clone the repo
+
+``` git clone <https://github.com/DanThomp507/DDOS-Protector.git> ```
+
+After cloning the repo:
+
+2. Start your services (each in a separate terminal tab)
 
 ``` zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties ```
 
 ``` kafka-server-start /usr/local/etc/kafka/server.properties ```
 
-2. Install requirements
+3. Install requirements
 
 ``` pip install -r requirements.txt ```
 
-3. Run both Producer and Consumer
+4. Run both Producer and Consumer (each in a separate terminal tab)
 
 ``` python main.py -i apache_log_ddos.txt ```
 
 ``` python Consumer.py ```
-
