@@ -1,5 +1,7 @@
 # DDOS Protector
 
+This solution is only run locally
+
 ## Requirements
 
 1. Python 2.7+
