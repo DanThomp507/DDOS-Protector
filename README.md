@@ -30,7 +30,7 @@ After cloning the repo:
 
 ``` pip install -r requirements.txt ```
 
-4. Run both Producer and Consumer (each in a separate terminal tab)
+4. Run both Producer and Consumer
 
 ``` python main.py -i apache_log_ddos.txt ```
 
