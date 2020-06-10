@@ -16,7 +16,7 @@ If you do not, instructions can be found here: <https://medium.com/@Ankitthakur/
 
 1. Clone the repo
 
-``` git clone <https://github.com/DanThomp507/DDOS-Protector.git> ```
+``` git clone https://github.com/DanThomp507/DDOS-Protector.git ```
 
 After cloning the repo:
 
