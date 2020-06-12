@@ -32,6 +32,6 @@ After cloning the repo:
 
 4. Run both Producer and Consumer
 
-``` python main.py -i apache_log_ddos.txt ```
+``` python main.py ```
 
 ``` python Consumer.py ```
