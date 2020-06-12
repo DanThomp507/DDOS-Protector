@@ -1,6 +1,8 @@
 # DDOS Protector
 
-This solution is only run locally
+This solution is only run locally.
+
+Data is ingested from the following API: <https://github.com/DanThomp507/DDOS-API>
 
 ## Requirements
 
